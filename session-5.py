@@ -4,6 +4,7 @@
 
 #importing libraries
 import numpy as np 
+import math as m
 from astropy.table import Table
 from astropy.io import ascii
 from astropy.io import fits
@@ -12,7 +13,7 @@ from astropy.io import fits
 def main():
 	#writes out table of fn sin(x) vs x
 	#with 1k entries
-	x = np.linspace(0, 2, 1000)
+	x = np.linspace(0, 2*m.pi, 1000)
 	y = np.sin(x)
 	data = Table([x, y], names = ['x', 'y'])
 	ascii.write(data, 'table.txt', format = 'commented_header')
