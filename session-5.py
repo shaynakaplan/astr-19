@@ -11,8 +11,7 @@ from astropy.io import fits
 
 #main function
 def main():
-	#writes out table of fn sin(x) vs x
-	#with 1k entries
+	#writes out table of fn sin(x) vs x with 1k entries
 	x = np.linspace(0, 2*m.pi, 1000)
 	y = np.sin(x)
 	data = Table([x, y], names = ['x', 'y'])
